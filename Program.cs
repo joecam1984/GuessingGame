@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("this is a test");
+            Console.WriteLine("This is a better test.");
         }
     }
 }
