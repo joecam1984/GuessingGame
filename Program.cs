@@ -40,6 +40,7 @@
                 else if (userGuess != zoltarrNumber && userAttempts < 3)
                 {
                     Console.WriteLine("Dat not Zoltarr number!");
+
                     Console.WriteLine(zoltarrNumber);
                     userAttempts++;
                 }
