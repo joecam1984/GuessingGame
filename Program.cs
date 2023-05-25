@@ -10,7 +10,6 @@
             string userAgain;
             int zoltarrNumber;
 
-
             Console.WriteLine("Welcome to Zoltarr! Zoltarr thinking of a number between 1 and 10. See if you can guess the number Zoltarr thinking of!");
 
             while (guessAgain == "y")
@@ -39,9 +38,7 @@
                     Console.WriteLine("Would you like to try again?");
                     guessAgain = Console.ReadLine().ToLower();
                 }
-                
             }
-
         }
     }
 }
