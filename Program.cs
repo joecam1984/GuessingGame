@@ -6,7 +6,7 @@
         {
             Random numGen = new Random();
             string guessAgain = "y";
-            int comboTracker = 0;
+            int userAttempts = 0;
             string userAgain;
             int zoltarrNumber;
 
@@ -21,21 +21,27 @@
                 if (userGuess == zoltarrNumber)
                 {
                     Console.WriteLine("You got Zoltarr number!");
-                    comboTracker++;
+                    userAttempts = 0;
                     Console.WriteLine("Would you like to play again?");
                     guessAgain = Console.ReadLine().ToLower();
                 }
                 else if (userGuess > 10 || userGuess < 1) {
                     Console.WriteLine("Zoltarr no play with cheaters! Zoltarr numbers are between 1 and 10!");
-                    comboTracker = 0;
                     guessAgain = "n";
                 }
-                else if (userGuess != zoltarrNumber)
+                else if (userGuess != zoltarrNumber && userAttempts < 3)
                 {
                     Console.WriteLine("Dat not Zoltarr number!");
+                   // if (userAttempts < 3) { }
                     Console.WriteLine("Zoltarr number was " + zoltarrNumber + "!");
-                    comboTracker = 0;
+                    userAttempts++;
                     Console.WriteLine("Would you like to try again?");
+                    guessAgain = Console.ReadLine().ToLower();
+                }
+                else
+                {
+                    Console.WriteLine($"You used all your attempts. Zoltarr number was {zoltarrNumber}. Would you like to start again?");
+                    userAttempts = 0;
                     guessAgain = Console.ReadLine().ToLower();
                 }
             }
