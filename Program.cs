@@ -7,7 +7,6 @@
             Random numGen = new Random();
             string guessAgain = "y";
             int userAttempts = 1;
-            string userAgain;
             int zoltarrNumber = 0;
             bool gameStart = true;
 
